@@ -15,9 +15,10 @@ class _HomePageState extends State<HomePage>{
         child: ListView(
           children: [
             DrawerHeader(child: Container(
+              color: Colors.pink,
               height: MediaQuery.of(context).size.height/3,
               width: MediaQuery.of(context).size.width,
-              child: FittedBox(child: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3PNNRDmwDV_an6mG4zJJyuV3ixJDdEDnIeq_jgXR_RmGHc4qGFI8Fkg2dPq3qcoD_ir0&usqp=CAU")),
+              child: FittedBox(child: Image.network("https://cdn.pixabay.com/photo/2017/01/19/23/46/church-1993645_640.jpg"),fit: BoxFit.cover,),
             )),
             ListTile(
               onTap: (){
@@ -60,6 +61,26 @@ class _HomePageState extends State<HomePage>{
               },
               trailing: Icon(Icons.info),
               title: Text("Info"),
+            ),
+             ListTile(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              trailing: Icon(Icons.save),
+              title: Text("Save"),
+            ),ListTile(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              trailing: Icon(Icons.event),
+              title: Text("Event"),
+            ),
+            ListTile(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              trailing: Icon(Icons.feed),
+              title: Text("Feeds"),
             ),
             ListTile(
               onTap: (){
